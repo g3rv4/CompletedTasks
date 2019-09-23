@@ -16,6 +16,7 @@ namespace CompletedTasks
                 .UseKestrel(options => {
                     options.Listen(IPAddress.Loopback, 5080); //HTTP port
                 })
+                .PreferHostingUrls(true)
                 .UseStartup<Startup>();
     }
 }
